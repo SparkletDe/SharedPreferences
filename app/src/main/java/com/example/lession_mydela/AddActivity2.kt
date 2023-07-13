@@ -7,12 +7,14 @@ import com.example.lession_mydela.util.PreferencesManager
 
 class AddActivity2 : AppCompatActivity() {
     lateinit var binding: ActivityAdd2Binding
-    private val preferences: PreferencesManager = PreferencesManager(this)
+    lateinit var preferences: PreferencesManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAdd2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        preferences= PreferencesManager(this)
 
         binding.btnAdd.setOnClickListener {
             preferences.putString(binding.editTextKey.text.toString(),binding.editTextValue.text.toString())

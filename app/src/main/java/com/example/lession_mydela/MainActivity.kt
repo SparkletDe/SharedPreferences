@@ -8,13 +8,15 @@ import com.example.lession_mydela.util.PreferencesManager
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    private val preferences:PreferencesManager = PreferencesManager(this)
+    lateinit var preferences:PreferencesManager
     override fun onCreate(savedInstanceState: Bundle?) {
 
         binding= ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-
         setContentView(binding.root)
+
+        preferences = PreferencesManager(this)
+
         binding.btnAdd.setOnClickListener(){
             var intent = Intent(this,AddActivity2::class.java)
             startActivity(intent)

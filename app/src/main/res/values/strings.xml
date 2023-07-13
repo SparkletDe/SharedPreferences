@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">lession_mydela</string>
+    <string name="app_name">Subject_sharedPreferences</string>
+    <string name="button_name">Display a note</string>
 </resources>
